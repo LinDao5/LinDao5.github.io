@@ -394,6 +394,7 @@ $(function () {
 
   bar.animate(.95);
 
+
   // Contact form
   $('.art-input').keyup(function () {
     if ($(this).val()) {
