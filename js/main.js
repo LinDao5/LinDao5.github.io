@@ -411,6 +411,7 @@ $(function () {
     },
   });
   bar.animate(0.95);
+
   var bar = new ProgressBar.Line(lineprog16, {
     strokeWidth: 1.72,
     easing: "easeInOut",
@@ -427,6 +428,23 @@ $(function () {
   });
 
   bar.animate(0.95);
+
+  var bar = new ProgressBar.Line(lineprog17, {
+    strokeWidth: 1.72,
+    easing: "easeInOut",
+    duration: 1400,
+    delay: 4100,
+    trailWidth: 1.72,
+    svgStyle: {
+      width: "100%",
+      height: "100%",
+    },
+    step: (state, bar) => {
+      bar.setText(Math.round(bar.value() * 100) + " %");
+    },
+  });
+
+  bar.animate(1.0);
 
   // Contact form
   $(".art-input").keyup(function () {
